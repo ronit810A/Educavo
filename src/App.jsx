@@ -30,7 +30,7 @@ function App() {
         </button>
       </section>
 
-      <div className="ticks"></div>
+      <div className="ticks"> RONIT</div>
 
       <section id="next-steps">
         <div id="docs">
