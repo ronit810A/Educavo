@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --colorOrange: #ff5421;
+    --colorWhite: fff;
+    --colorBlack: 000;
+    --colorGray: #505050;
+    --colorYellow: #fcb903;
+
+    --bg-1: #f9f8f8;
+    --bg2: #171F32;
+    --bg3: #151515;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 15px;
+    color: #505050;
+    font-family: 'Rubik', sans-serif !important;
+    vertical-align: baseline;
+    line-height: 26px;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin: 0 0 26px;
+    line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Nunito', sans-serif !important;
+    color: #111111;
+    margin: 0 0 26px;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 70px !important;
+    font-weight: 700 !important;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: 700 !important;
+}
+
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.capitalize {
+    text-transform: capitalize !important;
+}
+
+.bold-text {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
+
+.extra-bold {
+    font-weight: 800 !important;
+}
+
+a {
+    color: #21a7d0;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.width-unset {
+    width: unset !important;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+/* ==================
+    banerSection
+====================== */
+
+.baner-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.baner-section .slick-prev,
+.baner-section .slick-next {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.baner-section .slick-prev {
+    left: 20px;
+}
+
+.baner-section .slick-next {
+    right: 20px;
+}
+
+.baner-section .slick-prev:hover,
+.baner-section .slick-prev:focus,
+.baner-section .slick-next:hover,
+.baner-section .slick-next:focus {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.baner-section .slick-prev:before,
+.baner-section .slick-next:before {
+    color: #fff;
+    font-size: 24px;
+    opacity: 1;
+}
+
+.baner-slide {
+    height: 935px;
+    padding-top: 200px;
+}
+
+.baner-slide-text h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+    margin: 30px 0 60px 0;
+}
+
+.baner-slide-text h6 {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #ff5421;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif !important;
+
+}
+
+.baner-slide-text button {
+    color: #ffffff;
+    background: #ff5421;
+    border-radius: 5px;
+    padding: 12px 35px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s linear;
+}
+
+.baner-slide-text button:hover {
+    background-color: var(--bg2);
+}
+
+.baner-slide1 {
+    background: url(../assets/images/baner-slide-01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.baner-slide2 {
+    background: url(../assets/images/baner-slide-02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .baner-slide {
+        height: 250px;
+    }
+
+    .baner-slide h3 {
+        font-size: 24px;
+    }
+
+    .baner-section .slick-prev {
+        left: 10px;
+    }
+
+    .baner-section .slick-next {
+        right: 10px;
+    }
+}
