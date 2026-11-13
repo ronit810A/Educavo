@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
     --colorOrange: #ff5421;
@@ -26,7 +26,6 @@ body {
     vertical-align: baseline;
     line-height: 26px;
     font-weight: 400;
-    overflow-x: hidden;
 }
 
 img {
@@ -160,7 +159,7 @@ button {
 
 .baner-section .slick-prev:before,
 .baner-section .slick-next:before {
-    color: #fff;
+    color: var(--colorOrange);
     font-size: 24px;
     opacity: 1;
 }
@@ -234,4 +233,49 @@ button {
     .baner-section .slick-next {
         right: 10px;
     }
+}
+
+
+
+
+
+/* ==================================================
+                   rs-feature-section
+    ================================================ */
+
+
+.rs-feature-box {
+    border-radius: 5px 5px 5px 5px;
+    background: #171f32;
+    padding: 25px 40px 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+section.rs-feature-section {
+    margin-top: -180px;
+}
+
+.rs-feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.rs-feature-icon img {
+    width: 50px;
+    margin: 0 35px 8px 0;
+}
+
+.rs-feature-text h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.rs-feature-text p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
 }

@@ -1,0 +1,364 @@
+
+/* =========================
+   MAIN HEADER
+========================= */
+
+.educavo-header {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 999;
+}
+
+.educavo-navbar {
+  max-width: 1200px;
+  min-height: 100px;
+  margin: auto;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================
+   MAIN MENU
+========================= */
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  position: relative;
+  list-style: none;
+}
+
+.nav-link-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  display: inline-block;
+
+  color: #171717;
+  text-decoration: none;
+
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  font-family: Arial, sans-serif;
+
+  transition: 0.3s ease;
+}
+
+/* Home Active */
+
+.main-menu > .nav-item:first-child > .nav-link-wrap > .nav-link {
+  color: #ff5421 !important;
+}
+
+.nav-item:hover {
+  color: #ff5421 !important;
+}
+/* Link Hover */
+
+.nav-link:hover {
+  color: #ff5421 !important;
+}
+
+
+/* =========================
+   PLUS MINUS ICON
+========================= */
+
+.dropdown-toggle {
+  width: 18px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: #171717;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1;
+
+  padding: 0;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.nav-item:hover > .nav-link-wrap > .dropdown-toggle {
+  color: #ff5421;
+}
+
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 230px;
+
+  background: #ffffff;
+
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(12px);
+
+  transition: all 0.3s ease;
+
+  z-index: 999;
+}
+.dropdown-toggle::after {
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    display: none !important;
+}
+
+/* Show Dropdown */
+
+.nav-item:hover > .dropdown-menu,
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover Bridge */
+
+.nav-item > .dropdown-menu::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 12px;
+}
+
+
+/* =========================
+   DROPDOWN LINKS
+========================= */
+
+.dropdown-menu .nav-item {
+  width: 100%;
+  position: relative;
+}
+
+.dropdown-menu .nav-link-wrap {
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+.dropdown-menu .nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.dropdown-menu .nav-link:hover {
+  color: #ff5421;
+  padding-left: 5px;
+}
+
+.dropdown-menu .dropdown-toggle {
+  font-size: 18px;
+}
+
+
+/* =========================
+   THIRD LEVEL DROPDOWN
+========================= */
+
+.dropdown-menu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin: 0;
+}
+
+.dropdown-menu .nav-item:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   MOBILE TOGGLE
+========================= */
+
+.mobile-toggle {
+  display: none;
+
+  flex-direction: column;
+  gap: 5px;
+
+  background: transparent;
+  border: none;
+
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mobile-toggle span {
+  width: 25px;
+  height: 2px;
+  background: #171717;
+  transition: 0.3s;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+
+  .educavo-navbar {
+    min-height: 75px;
+    justify-content: flex-end;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  /* Main Menu */
+
+  .main-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+    padding: 10px 20px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .main-menu.active {
+    display: flex;
+  }
+
+  .nav-link-wrap {
+    justify-content: space-between;
+    padding: 12px 10px;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  /* Mobile Dropdown */
+
+  .dropdown-menu {
+    display: none;
+
+    position: static;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: none;
+
+    box-shadow: none;
+
+    margin: 0;
+    padding: 0 0 0 15px;
+
+    min-width: 100%;
+    transition: none;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  /* Disable Desktop Hover */
+
+  .nav-item:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .dropdown-menu .dropdown-menu {
+    position: static;
+    display: none;
+    padding-left: 15px;
+  }
+
+  .dropdown-menu .dropdown-menu.show {
+    display: block;
+  }
+
+  .dropdown-menu .nav-item:hover > .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown-menu .nav-item > .dropdown-menu.show {
+    display: block;
+  }
+
+  .dropdown-menu::before {
+    display: none;
+  }
+
+}
+
+
+
+
+
+/* ================================================================================================
+                                           main-header
+======================================================================================================*/
+
+
+.nav-bar .row {
+    align-items: center;
+}
